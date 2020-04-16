@@ -9,7 +9,6 @@ import javax.persistence.MappedSuperclass;
 
 @Data
 @MappedSuperclass //dziedziczenie w bazie
-
 public class EntityBase {
     // stworzyliśmy główną matkę po której bedziemy dziedziczyć, musimy mieć id i generatedValue
     @Id

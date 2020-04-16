@@ -18,10 +18,7 @@ public class Test extends EntityBase {
     public Test(String name) {
         this.name = name;
     }
-    //2 sposób
-    public Test(){
 
-    }
     @OneToMany(mappedBy = "test", cascade = CascadeType.ALL) //cascade ciągi typowania (zagnieżdżanie jedno w drugim)
     private List<Question> questions = new ArrayList<>();
 

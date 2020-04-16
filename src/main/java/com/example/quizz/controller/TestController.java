@@ -1,7 +1,7 @@
 package com.example.quizz.controller;
 
 import com.example.quizz.dto.TestDto;
-import com.example.quizz.dto.mapper.TestMapper;
+import com.example.quizz.dto.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.quizz.repository.TestRepository;
@@ -18,8 +18,9 @@ public class TestController {
     private TestRepository testRepository;
 
     @GetMapping("/{id}")
+    @ResponseBody
     public TestDto sayHello(@PathVariable Long id){
-        return testMapper.mapToTestDto(testRepository.findById(id).get());
+        return testMapper.mapToDto(testRepository.findById(id).get());
 
 
     }
